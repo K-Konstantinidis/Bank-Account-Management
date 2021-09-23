@@ -21,8 +21,8 @@ public class GUI extends JFrame{
 	JPanel panel = new JPanel();
 	JPanel panel2 = new JPanel();
 	
-	JTextField name, balance, inrate, amount = new JTextField(), acount = new JTextField();
-	JLabel label, label2, label3, label4, username, userbalance, amountlabel, acountlabel, interest;
+	JTextField name, balance, inrate, amount = new JTextField(), account = new JTextField();
+	JLabel label, label2, label3, label4, username, userbalance, amountlabel, accountlabel, interest;
 	
 	JButton addCustomerBA, addCustomerSA, login;
 	
@@ -31,7 +31,7 @@ public class GUI extends JFrame{
 	JButton withdraw = new JButton("Withdraw Money");
 	JButton transfer = new JButton("Transfer Money");
 
-	ArrayList<Accounts> accounts = new ArrayList<>(); //All acounts in one list
+	ArrayList<Accounts> accounts = new ArrayList<>(); //All accounts in one list
 	String nameOfUser;
 	
 	public GUI() {
@@ -202,13 +202,13 @@ public class GUI extends JFrame{
 		panel2.add(withdraw);
 		
 		//Label and field for the account
-		acountlabel = new JLabel();
-		acountlabel.setText("Transfer Account");
-		acountlabel.setBounds(100, 125, 130, 20);
-		panel2.add(acountlabel);
+		accountlabel = new JLabel();
+		accountlabel.setText("Transfer Account");
+		accountlabel.setBounds(100, 125, 130, 20);
+		panel2.add(accountlabel);
 		
-		acount.setBounds(210, 125, 100, 20);
-		panel2.add(acount);
+		account.setBounds(210, 125, 100, 20);
+		panel2.add(account);
 			
 		//Add the remaining 2 buttons
 		transfer.setBounds(150, 155, 200, 20);
@@ -293,15 +293,15 @@ public class GUI extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String money = amount.getText(); //Get amount
-				String sendto = acount.getText(); //Get acount
+				String sendto = account.getText(); //Get account
 				amount.setText("");
-				acount.setText("");
+				account.setText("");
 				boolean trans = false;
 				boolean flag = false;
 				boolean flag1 = false;
 				String name = nameOfUser;
 				
-				if(money.isEmpty() || sendto.isEmpty()) { //If either amount or acount are empty
+				if(money.isEmpty() || sendto.isEmpty()) { //If either amount or account are empty
 					if(sendto.isEmpty()) {
 						JOptionPane.showMessageDialog(null, "You can't leave Transfer Acount empty");
 					}else
@@ -344,7 +344,7 @@ public class GUI extends JFrame{
 				username.setText("");
 				userbalance.setText("");
 				amount.setText("");
-				acount.setText("");
+				account.setText("");
 				layout.show(deck, "first");
 			}
 		});
