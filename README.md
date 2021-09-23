@@ -15,7 +15,7 @@ The panels change with the help of CardLayout. In the first panel you have the f
 
 3. Log in to your account.
 
-In the second panel, at the top right is the name of the user and at the top left is their balance. You also have the following options:
+In the second panel, at the top left is the name of the user and at the top right is their balance. You also have the following options:
 
 1. Deposit an amount of money,
 
