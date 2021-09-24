@@ -1,5 +1,5 @@
 # Bank-Account-Management
-A Java project to create a bank account (Regular or with interest) with methods for deposit, withdraw and transfer with UI.
+A Java project to create bank accounts (Regular or with interest) with methods for deposit, withdraw and transfer with UI.
 
 This is a java project that creates a bank system. The user is allowed to create multiple bank accounts. 
 
